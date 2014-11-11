@@ -1,4 +1,29 @@
 extends layout
 
-block content
-  p aaaa #{json}
+block content	
+	table(border='1')
+		tr
+			td IataOrigin
+			td IataDestination
+			td OriginStation
+			td DestinationStation
+			td airlines
+			td fareclass
+			td departure
+			td arrival
+			td durations
+			td flight_numbers
+			td number_of_stops
+		each item in json
+			tr
+				td= item.IataOrigin
+				td= item.IataDestination
+				td= item.OriginStation
+				td= item.DestinationStation
+				td= item.airlines
+				td= item.fareclass
+				td= item.departure
+				td= item.arrival
+				td= item.durations
+				td= item.flight_numbers
+				td= item.number_of_stops

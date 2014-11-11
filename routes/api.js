@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
 
 /* GET all airfares */
 router.get('/airfares/page/:page', function(req, res) {
-	var perPage = 10
+	var perPage = 20
   		,page = Math.max(0, req.params.page);
 	fare.count(function(err, count){
 		var total = count;
@@ -24,6 +24,8 @@ router.get('/airfares/page/:page', function(req, res) {
 	    });
 	});
 });
+
+
 
 /*router.get('/airfares/date/:date/page/:page', function(req, res) {
 	var perPage = 10

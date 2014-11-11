@@ -9,10 +9,10 @@ router.get('/', function(req, res) {
 
 router.get('/airfares/page/:page', function(req, res){
 	var page = req.params.page;
-	var url = 'http://128.199.222.42:3000/api';
+	var url = 'http://128.199.222.42:3000/api/airfares/page/' + page;
 	request({url: url}, function (error, response, body){
 		var json = JSON.parse(body);
-		res.render('airfares', { json: 'hello' });
+		res.render('airfares', { json: json });
 	});
 })
 
