@@ -12,8 +12,8 @@ router.get('/airfares/page/:page', function(req, res){
 	var url = 'http://128.199.222.42:3000/api';
 	request({url: url}, function (error, response, body){
 		var json = JSON.parse(body);
-	}
-	res.render('index', { title: 'Express', json: json });
+		res.render('airfares', { json: 'hello' });
+	});
 })
 
 module.exports = router;
