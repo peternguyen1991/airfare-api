@@ -36,8 +36,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<% json.forEach(function(item){ %>
+			<% json.forEach(function(item){ %>
+				<tr>
 					<td><%= item.IataOrigin %></td>
 					<td><%= item.IataDestination %></td>
 					<td><%= item.OriginStation %></td>
@@ -50,8 +50,8 @@
 					<td><%= item.durations %></td>
 					<td><%= item.flight_numbers %></td>
 					<td><%= item.number_of_stops %></td>
-				<%	}) %>
-			</tr>
+				</tr>
+			<%	}) %>
 		</tbody>
 	</table>
 
