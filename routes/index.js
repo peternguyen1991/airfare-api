@@ -13,8 +13,10 @@ router.get('/airfares/page/:page', function(req, res){
 	request({url: url}, function (error, response, body){
 		var json = JSON.parse(body);
 		json.forEach(function(value){
-			value.price = JSON.parse(value.price);
-		});s
+			var value.priceOptions = [];
+			var price = JSON.parse(value.price).Price;
+			json.priceOptions.push(price);
+		});
 		res.render('airfares', { json: json });
 	});
 })

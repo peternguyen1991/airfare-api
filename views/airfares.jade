@@ -22,8 +22,9 @@ block content
 				td= item.OriginStation
 				td= item.DestinationStation
 				td
-					pre
-						#{item.price}
+					ul
+						each price in item.priceOptions
+							li= price
 				td= item.airlines
 				td= item.fareclass
 				td= item.departure
