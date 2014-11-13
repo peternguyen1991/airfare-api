@@ -21,7 +21,10 @@ block content
 				td= item.IataDestination
 				td= item.OriginStation
 				td= item.DestinationStation
-				td= item.price
+				td
+					ul
+						each priceOption in item.price
+							li= priceOption.Price
 				td= item.airlines
 				td= item.fareclass
 				td= item.departure
