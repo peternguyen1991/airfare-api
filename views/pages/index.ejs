@@ -1,0 +1,63 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+		<div class="jumbotron">
+			<h1>This is great</h1>
+			<p>Welcome to templating using EJS</p>
+		</div>
+	</main>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>IataOrigin</th>
+				<th>IataDestination</th>
+				<th>OriginStation</th>
+				<th>DestinationStation</th>
+				<th>Price</th>
+				<th>airlines</th>
+				<th>fareclass</th>
+				<th>departure</th>
+				<th>arrival</th>
+				<th>durations</th>
+				<th>flight_numbers</th>
+				<th>number_of_stops</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<% json.foreach(function(item){ %>
+					<td><%= item.IataOrigin %></td>
+					<td><%= item.IataDestination %></td>
+					<td><%= item.OriginStation %></td>
+					<td><%= item.DestinationStation %></td>
+					<td><%= item.Price %></td>
+					<td><%= item.airlines %></td>
+					<td><%= item.fareclass %></td>
+					<td><%= item.departure %></td>
+					<td><%= item.arrival %></td>
+					<td><%= item.durations %></td>
+					<td><%= item.flight_numbers %></td>
+					<td><%= item.number_of_stops %></td>
+				<%	}) %>
+			</tr>
+		</tbody>
+	</table>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>

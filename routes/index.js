@@ -19,7 +19,7 @@ router.get('/airfares/page/:page', function(req, res){
 			var price = JSON.parse(element.price).Price;
 			json[index].priceOptions.push(price);
 		});
-		res.render('airfares', { json: json });
+		res.render('pages/index', { json: json });
 	});
 })
 
