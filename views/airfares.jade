@@ -1,6 +1,8 @@
 extends layout
 
-block content	
+block content
+	script(type='text/javascript').
+		console.log(JSON.parse(item.price));
 	table(border='1')
 		tr
 			td IataOrigin
