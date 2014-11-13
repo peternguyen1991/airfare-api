@@ -14,7 +14,7 @@ router.get('/airfares/page/:page', function(req, res){
 		var json = JSON.parse(body);
 		json.forEach(function(value){
 			value.price = JSON.parse(value.price);
-		});
+		});s
 		res.render('airfares', { json: json });
 	});
 })
