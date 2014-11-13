@@ -8,16 +8,15 @@ var fareSchema = mongoose.Schema({
     IataOrigin: String,
     IataDestination: String,
     OriginStation: String, 
-    DestinationStation: String, 
+    DestinationStation: String,
+    price: String,
     airlines: String, 
     fareclass: String,
-    //connection_airports: String, 
     departure: String,
     arrival: String,
     durations: Number, 
     flight_numbers: String, 
-    number_of_stops: Number, 
-    //distance: Number
+    number_of_stops: Number
 });
 var Fare = mongoose.model('Fare', fareSchema);
 
@@ -46,6 +45,7 @@ function search(day, callback){
 									IataDestination: cD,
 									OriginStation: element.leg.OriginStation,
 									DestinationStation: element.leg.DestinationStation,
+									price: element.PricingOptions,
 									airlines: JSON.stringify(element.leg.Carriers),
 									fareclass: 'Eco',
 									departure: element.leg.Departure,
