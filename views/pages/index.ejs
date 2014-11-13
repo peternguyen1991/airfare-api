@@ -42,7 +42,10 @@
 					<td><%= item.IataDestination %></td>
 					<td><%= item.OriginStation %></td>
 					<td><%= item.DestinationStation %></td>
-					<td><%= item.Price %></td>
+					<td>
+						<% var price = JSON.parse(item.price); %>
+						<%= price.Price %>
+					</td>
 					<td><%= item.airlines %></td>
 					<td><%= item.fareclass %></td>
 					<td><%= item.departure %></td>
@@ -51,7 +54,7 @@
 					<td><%= item.flight_numbers %></td>
 					<td><%= item.number_of_stops %></td>
 				</tr>
-			<%	}) %>
+			\<%	}) %>
 		</tbody>
 	</table>
 
