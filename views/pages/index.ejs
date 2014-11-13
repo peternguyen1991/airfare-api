@@ -25,7 +25,6 @@
 				<th>OriginStation</th>
 				<th>DestinationStation</th>
 				<th>Price</th>
-				<th>Price</th>
 				<th>airlines</th>
 				<th>fareclass</th>
 				<th>departure</th>
@@ -44,11 +43,12 @@
 					<td><%= item.DestinationStation %></td>
 					<td>
 						<% var prices = JSON.parse(item.price) %>
+						<ul>
 						<% prices.forEach(function(p){ %>
-							<p><%= p.Price %></p>
+							<li>Agent: <%= p.Agents %> - Price: <%= p.Price %></li>
 						<% })%>
+						<ul>
 					</td>
-					<td><%= item.price %></td>
 					<td><%= item.airlines %></td>
 					<td><%= item.fareclass %></td>
 					<td><%= item.departure %></td>
