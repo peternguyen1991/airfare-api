@@ -1,8 +1,7 @@
 extends layout
 
 block content
-	script(type='text/javascript').
-		console.log(JSON.parse(item.price));
+
 	table(border='1')
 		tr
 			td IataOrigin
@@ -18,6 +17,8 @@ block content
 			td flight_numbers
 			td number_of_stops
 		each item in json
+			script(type='text/javascript').
+				console.log(JSON.parse(item.price));
 			tr
 				td= item.IataOrigin
 				td= item.IataDestination
