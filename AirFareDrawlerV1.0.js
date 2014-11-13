@@ -45,7 +45,7 @@ function search(day, callback){
 									IataDestination: cD,
 									OriginStation: element.leg.OriginStation,
 									DestinationStation: element.leg.DestinationStation,
-									price: element.PricingOptions,
+									price: JSON.stringify(element.PricingOptions),
 									airlines: JSON.stringify(element.leg.Carriers),
 									fareclass: 'Eco',
 									departure: element.leg.Departure,
